@@ -1,61 +1,15 @@
+<?php
+require_once(__DIR__.'/common/includes.php'); ?>
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="auto">
-
-<head>
-    <title>Navbar Template · Bootstrap v5.3</title>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Astro v5.13.2">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/fontawesome.min.css">
-    <script src="js/popper.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <style>
-        main {
-            margin-top: 55px;
-        }
-    </style>
-</head>
-
-<body>
-    <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" aria-label="Offcanvas navbar large">
-            <div class="container">
-                <a class="navbar-brand fs-5 fw-bold fst-italic" href="#">GateMan India</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasNavbar2" aria-labelledby="offcanvasNavbar2Label">
-                    <div class="offcanvas-header">
-                        <h5 class="offcanvas-title fs-5 fw-bold fst-italic" id="offcanvasNavbar2Label">GateMan India</h5> <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fw-medium">
-                            <li class="nav-item"> <a class="nav-link fw-bold active" aria-current="page" href="#"><i class="fa-solid fa-house"></i> Home</a> </li>
-                            <li class="nav-item"> <a class="nav-link" aria-current="page" href="#"><i class="fa-solid fa-address-card"></i> About Us</a> </li>
-                            <li class="nav-item"> <a class="nav-link" href="#">Services</a> </li>
-                            <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-dungeon"></i> Products </a>
-                                <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="#">Swing Gates</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Sliding Gates</a></li>
-                                    <li>
-                                        <hr class="dropdown-divider">
-                                    </li>
-                                    <li><a class="dropdown-item" href="#">Boom Barrier</a></li>
-                                </ul>
-                            </li>
-                            <li class="nav-item"> <a class="nav-link" href="#"><i class="fa-solid fa-envelopes-bulk"></i> Contact Us</a> </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </nav>
+    <head>
+        <title>GateMan India - Welcome to the automatic gate system world</title>
+        <?php $inc->stylesheet(); ?>
+        <?php $inc->javascript(); ?>
+    </head>
+    <body>
+        <header>
+        <?php $inc->topheader(['first' => 'home']); ?>
     </header>
     <main>
         <div id="myCarousel" class="carousel slide" data-bs-ride="carousel" style="min-height: 250px; width: 100%;">
@@ -161,60 +115,6 @@
             </div>
         </section>
     </main>
-    <footer class="text-bg-dark">
-        <div class="container">
-            <footer class="row pt-5 pb-3 border-top">
-                <div class="col">
-                    <p><a href="/" class="d-flex align-items-center mb-3  text-bg-dark text-decoration-none" aria-label="Bootstrap">GateMan India</a></p>
-                    <p class="text-bg-dark">&copy; 2025</p>
-                </div>
-                <div class="col"></div>
-                <div class="col">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">About</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">About</a></li>
-                    </ul>
-                </div>
-                <div class="col">
-                    <h5>Section</h5>
-                    <ul class="nav flex-column">
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Home</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Features</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">Pricing</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">FAQs</a></li>
-                        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-bg-dark">About</a></li>
-                    </ul>
-                </div>
-            </footer>
-        </div>
-        <hr class="my-0">
-        <div class="container">
-            <footer class="d-flex flex-wrap justify-content-sm-between align-items-center py-3">
-                <div class="col-md-4 d-flex align-items-center">
-                    <a href="/" class="mb-3 me-2 mb-md-0 text-bg-dark text-decoration-none lh-1" aria-label="Bootstrap">GateMan India Icon</a>
-                    <span class="mb-3 mb-md-0 text-bg-dark">&copy; 2025 GateMan India</span>
-                </div>
-                <ul class="nav col-md-4 justify-content-sm-end list-unstyled d-flex">
-                    <li class="ms-3"><a class="text-bg-dark" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
-                    <li class="ms-3"><a class="text-bg-dark" href="#" aria-label="Facebook"><i class="fa-brands fa-facebook"></i></a></li>
-                </ul>
-            </footer>
-        </div>
-    </footer>
+    <?php $inc->footer(); ?>    
 </body>
-
 </html>

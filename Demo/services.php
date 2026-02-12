@@ -14,7 +14,7 @@ require_once(__DIR__.'/common/includes.php'); ?>
     <main>
         
         <img src="./images/services.jpg" class="img-fluid w-100" alt="Services Image" />
-        <div class="container col-xl-10 col-xxl-8 px-4 py-5">
+        <div class="container px-4 py-5">
             <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Our Services</h1>
             <p class="lead fw-normal">GateMan India provides a wide range of automated gate systems and security solutions tailored to meet the needs of residential and commercial clients across India.</p>
             <p class="lead fw-normal">Our services include the design, manufacturing, installation, and maintenance of high-quality swing gates, sliding gates, and boom barriers. We also offer customized solutions to enhance security and convenience for our customers.</p>

@@ -81,35 +81,35 @@ require_once(__DIR__.'/common/includes.php'); ?>
         </section>
         <section class="py-5">
             <div class="container">
-                <div class="row featurette">
+                <div class="row">
                     <div class="col-md-7">
-                        <h2 class="featurette-heading fw-normal lh-1">What is <span class="text-body-secondary">Swing Gates?</span></h2>
-                        <p class="lead">Swing gates are traditional, hinged barriers that open inward or outward like a door, offering a secure and elegant entrance for residential, commercial, and industrial properties.</p>
-                        <p class="lead">Available as single or double-leaf, they can be manual or automated, with common materials including steel, wood, and aluminum. These gates require clear arc space to operate and typically last 10-30 years with proper maintenance.</p>
+                        <h2 class="fw-normal">What is <span class="text-body-secondary">Swing Gates?</span></h2>
+                        <p class="lead fw-normal">Swing gates are traditional, hinged barriers that open inward or outward like a door, offering a secure and elegant entrance for residential, commercial, and industrial properties.</p>
+                        <p class="lead fw-normal">Available as single or double-leaf, they can be manual or automated, with common materials including steel, wood, and aluminum. These gates require clear arc space to operate and typically last 10-30 years with proper maintenance.</p>
                     </div>
                     <div class="col-md-5">
-                        <img src="https://www.newgate.uk.com/wp-content/uploads/2019/07/Manual-Swing-Gate-4.5m-2.jpg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" />
+                        <img src="https://www.newgate.uk.com/wp-content/uploads/2019/07/Manual-Swing-Gate-4.5m-2.jpg" alt="" class="bd-placeholder-img bd-placeholder-img-lg img-fluid mx-auto rounded-4" />
                     </div>
                 </div>
-                <hr class="featurette-divider my-5">
+                <hr class="border border-1 border-secondary opacity-50 my-5">
                 <div class="row featurette">
                     <div class="col-md-7 order-md-2">
-                        <h2 class="featurette-heading fw-normal lh-1">What is <span class="text-body-secondary">Sliding Gates?</span></h2>
-                        <p class="lead">Sliding gates are space-efficient, secure, and durable solutions for residential and commercial entrances, operating by moving horizontally along a track or via a cantilever system.</p>
-                        <p class="lead">Ideal for limited-space, wide, or sloping driveways, they offer enhanced security and wind resistance. Automated models use rack-and-pinion technology, providing convenience, safety sensors, and non-reversible motors for secure, locked positioning. </p>
+                        <h2 class="fw-normal">What is <span class="text-body-secondary">Sliding Gates?</span></h2>
+                        <p class="lead fw-normal">Sliding gates are space-efficient, secure, and durable solutions for residential and commercial entrances, operating by moving horizontally along a track or via a cantilever system.</p>
+                        <p class="lead fw-normal">Ideal for limited-space, wide, or sloping driveways, they offer enhanced security and wind resistance. Automated models use rack-and-pinion technology, providing convenience, safety sensors, and non-reversible motors for secure, locked positioning. </p>
                     </div>
                     <div class="col-md-5 order-md-1">
-                        <img src="https://www.newgate.uk.com/wp-content/uploads/2019/07/Automatic-Sliding-Gate-8m-5.jpg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" />
+                        <img src="https://www.newgate.uk.com/wp-content/uploads/2019/07/Automatic-Sliding-Gate-8m-5.jpg" alt="" class="bd-placeholder-img bd-placeholder-img-lg img-fluid mx-auto rounded-4" />
                     </div>
                 </div>
-                <hr class="featurette-divider my-5">
-                <div class="row featurette">
+                <hr class="border border-1 border-secondary opacity-50 my-5">
+                <div class="row">
                     <div class="col-md-7">
-                        <h2 class="featurette-heading fw-normal lh-1">What is <span class="text-body-secondary">Boom Barriers?</span></h2>
-                        <p class="lead">Boom barriers, also known as boom gates, are automated or manual gates with a long pivoting arm (the boom) that rises and lowers to control vehicle and sometimes pedestrian access through a checkpoint, entrance, or exit, commonly seen at parking lots, toll plazas, and secure facilities to manage traffic and enhance security by physically blocking unauthorized entry.</p>
+                        <h2 class="fw-normal">What is <span class="text-body-secondary">Boom Barriers?</span></h2>
+                        <p class="lead fw-normal">Boom barriers, also known as boom gates, are automated or manual gates with a long pivoting arm (the boom) that rises and lowers to control vehicle and sometimes pedestrian access through a checkpoint, entrance, or exit, commonly seen at parking lots, toll plazas, and secure facilities to manage traffic and enhance security by physically blocking unauthorized entry.</p>
                     </div>
                     <div class="col-md-5">
-                        <img src="https://qodenext.com/wp-content/uploads/2024/08/what-is-boom-barrier-system.jpg" alt="" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto rounded-4" />
+                        <img src="https://qodenext.com/wp-content/uploads/2024/08/what-is-boom-barrier-system.jpg" alt="" class="bd-placeholder-img bd-placeholder-img-lg img-fluid mx-auto rounded-4" />
                     </div>
                 </div>
             </div>

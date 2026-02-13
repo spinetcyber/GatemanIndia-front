@@ -45,7 +45,7 @@ class Includes {
         ?>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" aria-label="Offcanvas navbar large">
             <div class="container">
-                <a class="navbar-brand fs-5 fw-bold fst-italic" href="#">GateMan India</a>
+                <a class="navbar-brand fs-4 fw-bold fst-italic" href="#">GateMan India</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -65,13 +65,19 @@ class Includes {
                                 <a href="<?php echo $this->base_url(); ?>/services.php" class="nav-link <?php echo ($menu['first'] == 'services') ? ' fw-bold active' : ''; ?>"><i class="fa-solid fa-hand-holding"></i> Services</a>
                             </li>
                             <li class="nav-item dropdown">
-                                <a href="#" class="nav-link dropdown-toggle <?php echo ($menu['first'] == 'product') ? ' fw-bold active' : ''; ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-dungeon"></i> Products</a>
-                                <ul class="dropdown-menu">
-                                    <li><a href="#" class="dropdown-item">Swing Gates</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a href="#" class="dropdown-item">Sliding Gates</a></li>
-                                    <li><hr class="dropdown-divider"></li>
-                                    <li><a href="#" class="dropdown-item">Boom Barrier</a></li>
+                                <a href="#" class="nav-link dropdown-toggle <?php echo ($menu['first'] == 'products') ? ' fw-bold active' : ''; ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-dungeon"></i> Products</a>
+                                <ul class="dropdown-menu dropdown-menu-dark rounded-0 mt-lg-2 py-0">
+                                    <li>
+                                        <a href="#" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'swing') ? ' fw-bold active bg-black' : ''; ?>">Swing Gates</a>
+                                    </li>
+                                    <li><hr class="dropdown-divider bg-secondary my-0"></li>
+                                    <li>
+                                        <a href="#" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'sliding') ? ' fw-bold active bg-black' : ''; ?>">Sliding Gates</a>
+                                    </li>
+                                    <li><hr class="dropdown-divider bg-secondary my-0"></li>
+                                    <li>
+                                        <a href="#" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'boom') ? ' fw-bold active bg-black' : ''; ?>">Boom Barrier</a>
+                                    </li>
                                 </ul>
                             </li>
                             <li class="nav-item">

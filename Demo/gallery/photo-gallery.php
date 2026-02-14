@@ -16,21 +16,23 @@ require_once(__DIR__.'/../common/includes.php'); ?>
         <div class="container py-5">
             <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Photo Gallery</h1>
             <?php 
-            $photos = [];
+            $photos = range(1, 8);
+            shuffle($photos);
             ?>
-            <div class="row" data-masonry="{&quot;percentPosition&quot;: true }">
+            <div class="row" data-masonry='{"percentPosition": true }'>
                 <?php
-                for($i = 1; $i <= 12; $i++) {
-                    $photos[] = $inc->base_url('/assets/images/photo-gallery/'.random_int(1, 8).'.jpg');;
-                ?>
+                for($i = 1; $i <= count($photos); $i++) { ?>
                 <div class="col-sm-6 col-md-4 col-lg-3">
                     <div class="card mb-4">
-                        <img src="<?php echo $photos[$i-1]; ?>" class="card-img" alt="Gallery Image <?php echo $i; ?>" />
+                        <img src="<?php echo $inc->base_url('/assets/images/photo-gallery/'.($photos[$i-1]).'.jpg'); ?>" class="card-img" alt="Gallery Image <?php echo ($i - 1); ?>" />
                         <div class="card-img-overlay">
                             <button type="button" class="btn btn-success btn-lg btn-zoom opacity-75 position-absolute top-50 start-50 translate-middle fw-bold" data-id="<?php echo $i; ?>" data-bs-toggle="modal" data-bs-target="#PhotoGalleryModal">
                                 <i class="fa-solid fa-expand"></i>
                             </button>
                         </div>
+                        <!-- <div class="card-body">
+                            <h5 class="card-title mb-0">Gallery Image <?php echo ($photos[$i-1]); ?></h5>
+                        </div> -->
                     </div>
                 </div>
                 <?php } ?>
@@ -43,13 +45,13 @@ require_once(__DIR__.'/../common/includes.php'); ?>
                             <button type="button" class="btn-close btn-danger" data-bs-dismiss="modal" aria-label="Close"></button>
                         </div>
                         <div class="modal-body bg-transparent p-0 border-0">
-                            <div id="carouselExample" class="carousel carousel-dark slide">
+                            <div id="carouselExample" class="carousel slide">
                                 <div class="carousel-inner bg-transparent">
                                     <?php
-                                    for($i = 1; $i <= 12; $i++) {
+                                    for($i = 1; $i <= count($photos); $i++) {
                                     ?>
                                     <div class="carousel-item <?php echo $i == 1 ? 'active' : ''; ?>">
-                                        <img src="<?php echo $photos[$i-1]; ?>" class="d-block w-100" alt="Gallery Image <?php echo $i; ?>" />
+                                        <img src="<?php echo $inc->base_url('/assets/images/photo-gallery/'.($photos[$i-1]).'.jpg'); ?>" class="d-block w-100" alt="Gallery Image <?php echo $i; ?>" />
                                     </div>
                                     <?php } ?>
                                 </div>
@@ -73,14 +75,16 @@ require_once(__DIR__.'/../common/includes.php'); ?>
         var carouselElement = document.getElementById('carouselExample');
         const carousel = new bootstrap.Carousel(carouselElement, {
             interval: false,
-            wrap: true
+            wrap: true,
+            touch: false
         });
         document.querySelectorAll('.btn-zoom').forEach(button => {
             button.addEventListener('click', function() {
                 if (!carousel) {
                     carousel = new bootstrap.Carousel(carouselElement, {
                         interval: false,
-                        wrap: true
+                        wrap: true,
+                        touch: false
                     });
                 }
                 carousel.to(this.dataset.id - 1);

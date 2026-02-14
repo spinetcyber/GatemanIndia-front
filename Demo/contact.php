@@ -13,7 +13,7 @@ require_once(__DIR__.'/common/includes.php'); ?>
     </header>
     <main>
         
-        <img src="./images/contact.jpg" class="img-fluid w-100" alt="Contact Image" />
+        <img src="<?php echo $inc->base_url('/assets/images/contact.jpg'); ?>" class="img-fluid w-100" alt="Contact Image" />
         <div class="container py-5">
             <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Contact Us</h1>
             <div class="row">

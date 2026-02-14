@@ -12,7 +12,7 @@ require_once(__DIR__.'/common/includes.php'); ?>
         <?php $inc->topheader(['first' => 'about']); ?>
     </header>
     <main>
-        <img src="./images/about-us.jpg" class="img-fluid w-100" alt="About Us Image" />
+        <img src="<?php echo $inc->base_url('/assets/images/about-us.jpg'); ?>" class="img-fluid w-100" alt="About Us Image" />
         <div class="container py-5">
             <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">About Us</h1>
             <p class="lead fw-normal">Whether you need an automated gate system for your home, office, or industrial facility, GateMan India has the expertise and resources to provide you with the best solutions that meet your needs and budget. Contact us today to learn more about our products and services and how we can help you secure your property with our state-of-the-art gate automation systems.</p>

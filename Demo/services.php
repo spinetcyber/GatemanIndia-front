@@ -13,7 +13,7 @@ require_once(__DIR__.'/common/includes.php'); ?>
     </header>
     <main>
         
-        <img src="./images/services.jpg" class="img-fluid w-100" alt="Services Image" />
+        <img src="<?php echo $inc->base_url('/assets/images/services.jpg'); ?>" class="img-fluid w-100" alt="Services Image" />
         <div class="container py-5">
             <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Our Services</h1>
             <p class="lead fw-normal">GateMan India provides a wide range of automated gate systems and security solutions tailored to meet the needs of residential and commercial clients across India.</p>

@@ -5,7 +5,7 @@ session_start();
 class Includes {
 
 	public function __construct() {
-		$this->base = (in_array($_SERVER['SERVER_NAME'], array('www.gatemanindia.in', 'gatemanindia.in')) ? '' : 'autogates.loc/demo');
+		$this->base = (in_array($_SERVER['SERVER_NAME'], array('www.gatemanindia.in', 'gatemanindia.in')) ? '' : 'autogates.loc/Demo');
 		$this->form_token =	$this->randval(64);
 	}
 
@@ -25,8 +25,8 @@ class Includes {
         <meta name="description" content="">
         <meta name="author" content="Spinet Group">
         <meta name="generator" content="Astro v5.13.2">
-        <link rel="stylesheet" href="css/bootstrap.min.css">
-        <link rel="stylesheet" href="css/fontawesome.min.css">
+        <link rel="stylesheet" href="<?php echo $this->base_url('/assets/css/bootstrap.min.css'); ?>">
+        <link rel="stylesheet" href="<?php echo $this->base_url('/assets/css/fontawesome.min.css'); ?>">
         <style>
             main {
                 margin-top: 55px;
@@ -35,8 +35,8 @@ class Includes {
 	<?php }
 
 	public function javascript() { ?>
-        <script src="js/popper.min.js"></script>
-        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="<?php echo $this->base_url('/assets/js/popper.min.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo $this->base_url('/assets/js/bootstrap.min.js'); ?>"></script>
 	<?php }
 
 	public function topheader($menu = []) {
@@ -45,7 +45,7 @@ class Includes {
         ?>
 		<nav class="navbar navbar-expand-lg navbar-dark bg-success fixed-top" aria-label="Offcanvas navbar large">
             <div class="container">
-                <a class="navbar-brand fs-4 fw-bold fst-italic" href="#">GateMan India</a>
+                <a class="navbar-brand fs-4 fw-bold fst-italic lh-sm" href="#">GateMan India</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar2" aria-controls="offcanvasNavbar2" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
@@ -56,32 +56,35 @@ class Includes {
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-end flex-grow-1 pe-3 fw-medium">
                             <li class="nav-item">
-                                <a href="<?php echo $this->base_url(); ?>" class="nav-link <?php echo ($menu['first'] == 'home') ? ' fw-bold active' : ''; ?>" aria-current="home"><i class="fa-solid fa-house"></i> Home</a>
+                                <a href="<?php echo $this->base_url('/index.php'); ?>" class="nav-link <?php echo ($menu['first'] == 'home') ? ' fw-bold active' : ''; ?>" aria-current="home"><i class="fa-solid fa-house"></i> Home</a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo $this->base_url(); ?>/about.php" class="nav-link <?php echo ($menu['first'] == 'about') ? ' fw-bold active' : ''; ?>" aria-current="about"><i class="fa-solid fa-address-card"></i> About Us</a>
+                                <a href="<?php echo $this->base_url('/about.php'); ?>" class="nav-link <?php echo ($menu['first'] == 'about') ? ' fw-bold active' : ''; ?>" aria-current="about"><i class="fa-solid fa-address-card"></i> About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo $this->base_url(); ?>/services.php" class="nav-link <?php echo ($menu['first'] == 'services') ? ' fw-bold active' : ''; ?>"><i class="fa-solid fa-hand-holding"></i> Services</a>
+                                <a href="<?php echo $this->base_url('/services.php'); ?>" class="nav-link <?php echo ($menu['first'] == 'services') ? ' fw-bold active' : ''; ?>"><i class="fa-solid fa-hand-holding-heart"></i> Services</a>
                             </li>
                             <li class="nav-item dropdown">
                                 <a href="#" class="nav-link dropdown-toggle <?php echo ($menu['first'] == 'products') ? ' fw-bold active' : ''; ?>" role="button" data-bs-toggle="dropdown" aria-expanded="false"> <i class="fa-solid fa-dungeon"></i> Products</a>
                                 <ul class="dropdown-menu dropdown-menu-dark rounded-0 mt-lg-2 py-0">
                                     <li>
-                                        <a href="#" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'swing') ? ' fw-bold active bg-black' : ''; ?>">Swing Gates</a>
+                                        <a href="<?php echo $this->base_url('/product/swing-gates.php'); ?>" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'swing') ? ' fw-bold active bg-black' : ''; ?>">Swing Gates</a>
                                     </li>
                                     <li><hr class="dropdown-divider bg-secondary my-0"></li>
                                     <li>
-                                        <a href="#" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'sliding') ? ' fw-bold active bg-black' : ''; ?>">Sliding Gates</a>
+                                        <a href="<?php echo $this->base_url('/product/sliding-gates.php'); ?>" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'sliding') ? ' fw-bold active bg-black' : ''; ?>">Sliding Gates</a>
                                     </li>
                                     <li><hr class="dropdown-divider bg-secondary my-0"></li>
                                     <li>
-                                        <a href="#" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'boom') ? ' fw-bold active bg-black' : ''; ?>">Boom Barrier</a>
+                                        <a href="<?php echo $this->base_url('/product/boom-barrier.php'); ?>" class="dropdown-item fw-semibold py-2 py-lg-3 <?php echo ($menu['first'] == 'products' && $menu['second'] == 'boom') ? ' fw-bold active bg-black' : ''; ?>">Boom Barrier</a>
                                     </li>
                                 </ul>
                             </li>
                             <li class="nav-item">
-                                <a href="<?php echo $this->base_url(); ?>/contact.php" class="nav-link <?php echo ($menu['first'] == 'contact') ? ' fw-bold active' : ''; ?>"><i class="fa-solid fa-envelopes-bulk"></i> Contact Us</a>
+                                <a href="<?php echo $this->base_url('/gallery/photo-gallery.php'); ?>" class="nav-link <?php echo ($menu['first'] == 'gallery') ? ' fw-bold active' : ''; ?>"><i class="fa-solid fa-images"></i> Photo Gallery</a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="<?php echo $this->base_url('/contact.php'); ?>" class="nav-link <?php echo ($menu['first'] == 'contact') ? ' fw-bold active' : ''; ?>"><i class="fa-solid fa-envelopes-bulk"></i> Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -95,8 +98,7 @@ class Includes {
             <div class="container">
                 <footer class="row pt-5 pb-3 border-top">
                     <div class="col">
-                        <p><a href="/" class="d-flex align-items-center mb-3  text-bg-dark text-decoration-none" aria-label="Bootstrap">GateMan India</a></p>
-                        <p class="text-bg-dark">&copy; 2025</p>
+                        <p><a href="<?php echo $this->base_url('/index.php'); ?>" class="d-flex align-items-center mb-3  text-bg-dark text-decoration-none" aria-label="Bootstrap">GateMan India</a></p>
                     </div>
                     <div class="col"></div>
                     <div class="col">
@@ -136,7 +138,7 @@ class Includes {
                 <footer class="d-flex flex-wrap justify-content-sm-between align-items-center py-3">
                     <div class="col-md-4 d-flex align-items-center">
                         <a href="/" class="mb-3 me-2 mb-md-0 text-bg-dark text-decoration-none lh-1" aria-label="Bootstrap">GateMan India Icon</a>
-                        <span class="mb-3 mb-md-0 text-bg-dark">&copy; 2025 GateMan India</span>
+                        <span class="mb-3 mb-md-0 text-bg-dark">&copy; <?php echo date('Y'); ?> GateMan India. All rights reserved.</span>
                     </div>
                     <ul class="nav col-md-4 justify-content-sm-end list-unstyled d-flex">
                         <li class="ms-3"><a class="text-bg-dark" href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a></li>
